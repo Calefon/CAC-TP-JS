@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Int. CAC js/title></title>
+
+    <!--Link a CDN Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../css/css.css">
+</head>
+<body>
+    <!--Link a CDN Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-custom navbar-expand-lg py-0" style="background-color: #353A40;">
+        <div class="container-fluid navDivCont p-0">
+          <a class="navbar-brand text-white fs-3 ms-0 me-auto px-0 navbar-brand-custom" href="../index.html">
+            <img src="../img/codoacodo.png" alt="CAC" style="height: 88px; width:auto;">
+            Conf Bs As
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">            
+            <ul class="navbar-nav ms-auto me-0 mb-2 mb-lg-0 navbar-nav-custom">
+              <li class="nav-item">
+                <a class="nav-link text-white-50 fs-4" aria-current="page" href="../index.html">La Conferencia</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white-50 fs-4" href="#">Los oradores</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white-50 fs-4" href="#">El lugar y la Fecha</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white-50 fs-4" href="#">Conviértete en orador</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active fs-4 nav-comprar" href="#">Comprar Tickets</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <section class="container d-flex justify-content-around mt-5" style="height: 30vh;">
+        <div class="row gx-3" style="width: 75%;">
+            <div class="col-4">
+                <div class="ticket-card border border-primary text-center d-flex flex-column align-items-center justify-content-around" style="height: 100%;">
+                
+                <h4 class="fs-3">Estudiante</h4>
+                <p class="fs-5">Tienen un descuento</p>
+                <p class="porcentaje fs-5 fw-bold">80%</p>
+                <p class="info-text text-black-50">* presentar documentación</p>
+                
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="ticket-card border border-secondary text-center d-flex flex-column align-items-center justify-content-around p-2" style="height: 100%;">
+                
+                <h4 class="fs-3">Trainee</h4>
+                <p class="fs-5">Tienen un descuento</p>
+                <p class="porcentaje fs-5 fw-bold">50%</p>
+                <p class="info-text text-black-50">* presentar documentación</p>               
+                
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="ticket-card border border-warning text-center d-flex flex-column align-items-center justify-content-around" style="height: 100%;">
+                
+                <h4 class="fs-3">Junior</h4>
+                <p class="fs-5">Tienen un descuento</p>
+                <p class="porcentaje fs-5 fw-bold">15%</p>
+                <p class="info-text text-black-50">* presentar documentación</p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid d-flex flex-column align-items-center mt-3">
+        <p class="mb-0">VENTA</p>
+        <h2>VALOR DE TICKET $<span id="precio-ticket">200</span></h2>
+
+        <form class="d-flex flex-column align-items-center justify-content-center mt-3" style="width: 100%;">
+
+            <div class="row m-0 p-0" style="width: 50%">
+              <div class="col ps-0">
+                <input type="text" class="form-control" id="InputNombre" name="Nombre" placeholder="Nombre">
+              </div>
+              <div class="col pe-0">
+                <input type="text" class="form-control" id="InputApellido" name="Apellido" placeholder="Apellido">
+              </div>
+            </div>
+
+            <div class="row my-3 p-0" style="width: 50%">
+                <div class="col p-0">
+                <input type="text" class="form-control" name="correoEl" id="InputCorreoEl" placeholder="Correo">
+                </div>
+            </div>
+
+            <div class="row m-0 p-0" style="width: 50%">
+                <div class="col ps-0">
+                    <label for="InputCant" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" id="InputCant" name="CantidadTckt" placeholder="Cantidad">
+                </div>
+                <div class="col pe-0">
+                    <label for="InputCat" class="form-label">Categoría</label>
+                    <select class="form-select" id="InputCat" name="CatTckt" required>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="trainee">Trainee</option>
+                        <option value="junior">Junior</option>
+                    </select>
+                </div>                
+            </div>
+
+            <div class="row my-4 p-0" style="width: 50%">
+                <div class="col p-0">
+                <div class="bg-info d-flex flex-row align-items-center" style="height: 50px; border-radius:6px; --bs-bg-opacity: 0.5;">
+                   <p class="p-0 m-0 ms-4" style="color: rgb(0, 72, 131)">Total a pagar: <b>$ <span id="totalAPagar"></span></b></p> 
+                </div>
+                </div>
+            </div>
+
+            <div class="row m-0 p-0" style="width: 50%">
+                <div class="col ps-0">
+                    <button type="reset" class="btn btn-success" style="width: 100%;">Borrar</button>
+                </div>
+                <div class="col pe-0">
+                    <button type="button" class="btn btn-success" id="btn-resumen" style="width: 100%;">Resumen</button>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+              
+            </div>
+            
+        </form>
+
+    </section>
+    <footer class="py-4 mt-3" style="height: 110px; background-color: #1C3846;">
+        <div class="container">
+            <div class="row g-4 justify-content-around align-items-center">                
+                    <div class="col-6 col-sm-4 col-lg-1 custom-footer-div">
+                        <a href="#" class="text-decoration-none text-light">Preguntas<br>frecuentes</a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-1 custom-footer-div">
+                        <a href="#" class="text-decoration-none text-light">Contáctanos</a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-1 custom-footer-div">
+                        <a href="#" class="text-decoration-none text-light">Prensa</a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-1 custom-footer-div">
+                        <a href="#" class="text-decoration-none text-light">Conferencias</a>
+                    </div>                            
+                    <div class="col-6 col-sm-4 col-lg-2 custom-footer-div">
+                        <a href="#" class="text-decoration-none text-light">Términos y<br>condiciones</a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-1 custom-footer-div">
+                        <a href="#" class="text-decoration-none text-light">Privacidad</a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-1 custom-footer-div">
+                        <a href="#" class="text-decoration-none text-light">Estudiantes</a>
+                    </div>                
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/comprarTickets.js"></script>
+</body>
+</html>
